@@ -1,0 +1,17 @@
+Console.Clear();
+int[] array = new int[10];
+for (int i = 0; i < array.Length; i++)
+{
+    array[i] = new Random().Next(10, 90);
+    Console.Write(array[i] + " ");
+}
+Console.WriteLine();
+Console.Write("Введите число для поиска: ");
+int findValue = Convert.ToInt32(Console.ReadLine());
+bool flag = false;
+foreach (int element in array)
+{
+    if (element == findValue) flag = true;
+}
+if (flag) Console.Write("Есть");
+else Console.Write("Нету");

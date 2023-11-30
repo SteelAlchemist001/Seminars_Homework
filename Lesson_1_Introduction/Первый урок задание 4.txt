@@ -1,0 +1,35 @@
+using System;
+
+public class Answer {
+    static void PrintEvenNumbers(int number)
+    {
+      // Введите свое решение ниже
+//       int ok = 0;
+//       while (ok <= number)
+// {
+//     Console.Write($"number = "+number+" -> "+ok+"  ");
+//     ok = ok + 2;
+// }
+      for (int i=1; i<=number; i++)
+    {
+      if (i % 2==0)
+        Console.Write("number = "+number+" -> "+i+"  ");
+    }
+    }
+
+
+  // Не удаляйте и не меняйте метод Main! 
+    static public void Main(string[] args) {
+        int number;
+
+        if (args.Length >= 1) {
+            number = int.Parse(args[0]);
+        } else {
+           // Здесь вы можете поменять значения для отправки кода на Выполнение
+            number = 6;
+        }
+
+        // Не удаляйте строки ниже
+        PrintEvenNumbers(number);
+    }
+}
